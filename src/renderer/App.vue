@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <keep-alive>
+      <router-view></router-view>
+    </keep-alive>
   </div>
 </template>
 
@@ -12,4 +14,6 @@
 
 <style>
   /* CSS */
+  @import url("./assets/css/common.less");
+  @import url("./assets/css/reset.css");
 </style>
