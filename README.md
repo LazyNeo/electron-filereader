@@ -14,6 +14,7 @@ npm run dev
 # build electron application for production
 npm run build
 > first build use  
+set ELECTRON_MIRROR=https://npm.taobao.org/mirrors/electron/
 npm run build --download.mirror=https://npm.taobao.org/mirrors/electron/
 
 # lint all JS/Vue component files in `src/`
