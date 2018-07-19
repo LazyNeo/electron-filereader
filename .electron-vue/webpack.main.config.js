@@ -5,12 +5,22 @@ process.env.BABEL_ENV = 'main'
 const path = require('path')
 const { dependencies } = require('../package.json')
 const webpack = require('webpack')
-
+function resolve (dir) {
+  return path.join(__dirname, '..', dir)
+}
 const BabiliWebpackPlugin = require('babili-webpack-plugin')
 
 let mainConfig = {
   entry: {
     main: path.join(__dirname, '../src/main/index.js')
+  },
+  resolve: {
+    extensions: ['.js', '.vue', '.json'],
+    alias: {
+      'vue$': 'vue/dist/vue.esm.js',
+      '@': resolve('src'),
+      'static': resolve('static')
+    }
   },
   externals: [
     ...Object.keys(dependencies || {})

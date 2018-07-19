@@ -8,7 +8,12 @@
 
 <script>
   export default {
-    name: 'filereader'
+    name: 'filereader',
+    created () {
+      if (!CK.getCookie('valid_time')) {
+        this.$router.replace({name: 'valid'})
+      }
+    }
   }
 </script>
 

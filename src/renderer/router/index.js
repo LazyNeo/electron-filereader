@@ -16,6 +16,11 @@ export default new Router({
       component: require('@/components/chenshidan/home').default
     },
     {
+      path: '/valid',
+      name: 'valid',
+      component: require('@/components/chenshidan/valid').default
+    },
+    {
       path: '/item',
       name: 'chenshidanItem',
       component: require('@/components/chenshidan/item').default
