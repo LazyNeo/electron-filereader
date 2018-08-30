@@ -71,7 +71,6 @@ export default {
           console.error(err)
           return
         }
-        console.log(files)
         this.list = files
         this.readData(files)
       })
@@ -98,11 +97,13 @@ export default {
                 xiekong++
                 continue
               }
-              sum += Math.ceil(num / 100) * 100
+              sum += num
             }
           }
           if (sum < 500) {
             sum = 500
+          } else {
+            sum = Math.ceil(num / 100) * 100
           }
           for (let i = 0; i < shuangxie; i++) {
             dps.push(0)
