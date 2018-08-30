@@ -103,7 +103,7 @@ export default {
           if (sum < 500) {
             sum = 500
           } else {
-            sum = Math.ceil(num / 100) * 100
+            sum = Math.ceil(sum / 100) * 100
           }
           for (let i = 0; i < shuangxie; i++) {
             dps.push(0)
